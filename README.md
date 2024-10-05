@@ -1,1 +1,1 @@
-create a virtual enviroment, activate it and then in terminal run ( pip install requirements.txt )
+create a virtual environment, activate it, and then in the terminal run ( pip install requirements.txt )
