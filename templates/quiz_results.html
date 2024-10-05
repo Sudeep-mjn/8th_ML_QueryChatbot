@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Quiz Results</h1>
+
+  <p id="score">Your current score: <strong><span id="current-score" style="color:green">0</span> out of 10</p>
+
+  <div id="results">
+    {% for response in responses %}
+      <div style="margin-bottom: 20px;">
+        <p><strong>{{ loop.index }}. Question:</strong> {{ response.question }}</p>
+        {% if response.user_answer == response.correct_answer %}
+          <p style="color: green; font-weight: bold;"><strong>Your Answer:</strong> {{ response.user_answer }}</p>
+        {% else %}
+          <p style="color: red; font-weight: bold;"><strong>Your Answer:</strong> {{ response.user_answer }}</p>
+          <p style="color: green; font-weight: bold;"><strong>Correct Answer:</strong> {{ response.correct_answer }}</p>
+        {% endif %}
+      </div>
+      <hr>
+    {% endfor %}
+  </div>
+
+  <strong><p>You got <strong><span id="correct-count"></span><strong> out of <span id="total-questions"></span> questions correct!</p>
+
+  <a href="{{ url_for('quiz') }}">
+    <button>Load More Quiz Questions</button>
+  </a>
+
+<a href="{{ url_for('home') }}"> <button id="micBtn" style="margin-left:15px";>Return To Chatbot</button>
+  </a>
+
+  <div id="pieChartContainer" style="width: 50%; margin: auto;">
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <script>
+    const responses = {{ responses|tojson }}; // Assuming responses is a Python list
+    let correctCount = 0;
+    let totalQuestions = responses.length;
+
+    // Loop through responses in JavaScript
+    responses.forEach(response => {
+      if (response.user_answer === response.correct_answer) {
+        correctCount++;
+      }
+    });
+
+    // Update results in HTML using DOM manipulation
+    document.getElementById('current-score').textContent = correctCount;
+    document.getElementById('correct-count').textContent = correctCount;
+    document.getElementById('total-questions').textContent = totalQuestions;
+
+    // Create the pie chart using Chart.js
+    const ctx = document.getElementById('pieChart').getContext('2d');
+
+    const pieChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Correct', 'Incorrect'],
+        datasets: [{
+          data: [correctCount, totalQuestions - correctCount],
+          backgroundColor: ['#4CAF50', '#F44336'], // Green for correct, Red for incorrect
+          hoverOffset: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: true,
+            text: 'Quiz Results'
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

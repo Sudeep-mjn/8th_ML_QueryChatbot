@@ -1,0 +1,182 @@
+[
+    {"question": "What is supervised learning?", "options": ["Learning from labeled data", "Learning from unlabeled data", "Learning without feedback", "None of the above"], "answer": "Learning from labeled data"},
+    {"question": "What does overfitting mean?", "options": ["Model performs well on training data but poorly on unseen data", "Model performs well on unseen data", "Model is too simple", "None of the above"], "answer": "Model performs well on training data but poorly on unseen data"},
+    {"question": "'Clustering' is an example of which type of learning?", "options": ["Supervised", "Unsupervised", "Semi-supervised", "Reinforcement"], "answer": "Unsupervised"},
+    {"question": "'Reinforcement Learning' involves what kind of feedback?", "options": ["Positive and negative rewards", "Labeled data", "Unlabeled data", "No feedback"], "answer": "Positive and negative rewards"},
+    {"question": "'Overfitting' can be mitigated by which technique?", "options": ["Increasing model complexity", "Reducing training data", "Using dropout layers", "None of the above"], "answer": "Using dropout layers"},
+    {"question": "'Feature Engineering' refers to what process?", "options": ["Creating new features from existing ones", "Selecting features automatically", "Removing all features", "None of the above"], "answer": "Creating new features from existing ones"},
+    {"question": "'Cross-Validation' helps in what aspect?", "options": ["Hyperparameter tuning", "Data cleaning", "Feature selection", "All of the above"], "answer": "Hyperparameter tuning"},
+    {"question": "'Decision Trees' can be prone to which issue?", "options": ["Underfitting", "Overfitting", "Bias", "Variance"], "answer": "Overfitting"},
+    {"question": "'Neural Networks' are primarily used in which field?", "options": ["Computer Vision", "Natural Language Processing", "Speech Recognition", "All of the above"], "answer": "All of the above"},
+    {"question": "'Transfer Learning' allows models to do what?", "options": ["Transfer knowledge from one task to another", "Train from scratch every time", "Ignore previous knowledge", "None of the above"], "answer": "Transfer knowledge from one task to another"},
+    {
+        "question": "What is the main goal of unsupervised learning?",
+        "options": [
+            "To predict outcomes based on labeled data",
+            "To find hidden patterns in unlabeled data",
+            "To classify data into predefined categories",
+            "To optimize model parameters"
+        ],
+        "answer": "To find hidden patterns in unlabeled data"
+    },
+    {
+        "question": "Which of the following is a type of supervised learning?",
+        "options": [
+            "Clustering",
+            "Regression",
+            "Dimensionality Reduction",
+            "Association"
+        ],
+        "answer": "Regression"
+    },
+    {
+        "question": "'K-means' is primarily used for what type of task?",
+        "options": [
+            "Classification",
+            "Regression",
+            "Clustering",
+            "Anomaly Detection"
+        ],
+        "answer": "Clustering"
+    },
+    {
+        "question": "'Support Vector Machines' are used for which type of problems?",
+        "options": [
+            "Linear problems only",
+            "Classification and regression problems",
+            "Only clustering problems",
+            "None of the above"
+        ],
+        "answer": "Classification and regression problems"
+    },
+    {
+        "question": "'Principal Component Analysis (PCA)' is used for what purpose?",
+        "options": [
+            "Feature selection",
+            "Feature extraction and dimensionality reduction",
+            "Data cleaning",
+            "Model evaluation"
+        ],
+        "answer": "Feature extraction and dimensionality reduction"
+    },
+    {
+        "question": "'Random Forest' is an example of which type of learning?",
+        "options": [
+            "Ensemble Learning",
+            "Reinforcement Learning",
+            "Unsupervised Learning",
+            "None of the above"
+        ],
+        "answer":  "Ensemble Learning"
+    },
+    {
+        "question": "'Bias-Variance Tradeoff' refers to what?",
+        "options": [
+            "The balance between training time and accuracy",
+            "The balance between underfitting and overfitting",
+            "The tradeoff between model complexity and interpretability",
+            "None of the above"
+        ],
+        "answer":  "The balance between underfitting and overfitting"
+    },
+    {
+        "question": "'Gradient Boosting' is a technique used for what?",
+        "options": [
+            "Feature selection",
+            "'Ensemble Learning'",
+            "'Dimensionality Reduction'",
+            "'Clustering'"
+        ],
+        "answer":  "'Ensemble Learning'"
+    },
+    {
+        "question": "'Logistic Regression' is used for which type of tasks?",
+        "options": [
+            "'Regression'",
+            "'Classification'",
+            "'Clustering'",
+            "'All of the above'"
+        ],
+        "answer":  "'Classification'"
+    },
+    {
+        "question": "'Hyperparameters' are parameters that are set before what?",
+        "options": [
+            "'Training'",
+            "'Testing'",
+            "'Model evaluation'",
+            "'Data preprocessing'"
+        ],
+        "answer":  "'Training'"
+    },
+    {
+        "question": "'Dropout' is a technique used to prevent what?",
+        "options": [
+            "'Underfitting'",
+            "'Overfitting'",
+            "'Bias'",
+            "'Variance'"
+        ],
+        "answer":  "'Overfitting'"
+    },
+    {
+        "question": "'Confusion Matrix' provides information about what?",
+        "options": [
+            "'Model performance on training data'",
+            "'Model performance on validation data'",
+            "'True positives, false positives, true negatives, and false negatives'",
+            "'None of the above'"
+        ],
+        "answer":  "'True positives, false positives, true negatives, and false negatives'"
+    },
+    {
+        "question": "'AUC-ROC Curve' is used to evaluate what?",
+        "options": [
+            "'Regression models'",
+            "'Classification models'",
+            "'Clustering models'",
+            "'All types of models'"
+        ],
+        "answer":  "'Classification models'"
+    },
+    {
+        "question": "'Time Series Analysis' is primarily concerned with what?",
+        "options": [
+            "'Static data analysis'",
+            "'Dynamic data analysis over time'",
+            "'Image recognition'",
+            "'Natural language processing'"
+        ],
+        "answer":  "'Dynamic data analysis over time'"
+    },
+    {
+        "question": "'Transfer Learning' is particularly useful when:",
+        "options": [
+            "'You have a large amount of labeled data'",
+            "'You have limited labeled data but a large amount of unlabeled data'",
+            "'You want to train a model from scratch every time'",
+             "'You want to leverage knowledge from a pre-trained model'"
+         ],
+         "answer":  "'You want to leverage knowledge from a pre-trained model'"
+     },
+     {
+         "question":  "'Outlier Detection' is important because:",
+         "options":  [
+             "'It helps improve model accuracy by removing noise from data'",
+             "'It increases the size of the dataset'",
+             "'It reduces computation time significantly'",
+             "'None of the above'"
+         ],
+         "answer":  "'It helps improve model accuracy by removing noise from data'"
+     },
+     {
+         "question":  "'Neural Networks' consist of which components?",
+         "options":  [
+             "'Input layer, hidden layers, output layer'",
+             "'Only input and output layers'",
+             "'Only hidden layers'",
+             "'Input layer, output layer, and bias nodes'"
+         ],
+         "answer":  "'Input layer, hidden layers, output layer'"
+     }
+]
